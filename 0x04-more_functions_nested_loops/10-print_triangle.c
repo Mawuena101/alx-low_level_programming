@@ -1,13 +1,34 @@
 #include "main.h"
 
 /**
- * _isdigit - check for a digit
- * @c : character to check
- * Return:0 or 1
+ * print_triangle - check for a digit
+ * @size : integer type
+ * Return:void
  */
 
-int _isdigit(int c)
+void print_triangle(int size)
 {
-	return (c >= 48 && c <= 57);
 
+	int i = 1, ii;
+
+	while (i <= size && size > 0)
+	{
+		ii = 0;
+		while (ii < size - i)
+		{
+			_putchar(' ');
+			ii++;
+		}
+		ii = 0;
+		while (ii < i)
+		{
+			_putchar('#');
+			ii++;
+		}
+
+		_putchar('\n');
+		i++;
+	}
+	if (i == 1)
+		_putchar('\n');
 }
